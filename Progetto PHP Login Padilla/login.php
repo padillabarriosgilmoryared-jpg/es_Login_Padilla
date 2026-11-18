@@ -2,10 +2,14 @@
     include 'user.php';
 
     if(isset($_POST['login'])){
-        $_SESSION['utente_corrente'] = $_POST['username'];
-        $_SESSION['password_corrente'] = $_POST['password'];
-        header("Location: prodotti.php");
-        exit;
+        if(($_POST['username'] == "pippo" && $_POST['password'] == "pippo") || ($_POST['username'] == "pluto" && $_POST['password'] == "pluto") || ($_POST['username'] == "paperino" && $_POST['password'] == "paperino")){
+            $_SESSION['utente_corrente'] = $_POST['username'];
+            $_SESSION['password_corrente'] = $_POST['password'];
+            header("Location: prodotti.php");
+            exit;
+        }else{
+            echo "Nome utente o password non disponibili...";
+        }
     }
 
     if(isset($_SESSION['utente_corrente'])){
@@ -39,7 +43,6 @@
             Inserisci password:   
         </label>
         <input type="text" name="password">
-        
         <button name="login">Login</button>
     </form>
 </body>
