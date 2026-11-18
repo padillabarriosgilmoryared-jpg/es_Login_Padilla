@@ -19,4 +19,5 @@
     if(!isset($_SESSION['contatore'])){
         $_SESSION['contatore'] = 0;
     }
+    
 ?>

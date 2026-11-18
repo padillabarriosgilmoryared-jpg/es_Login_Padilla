@@ -4,7 +4,7 @@
         header("Location: login.php");
         exit;
     }else{
-
+        
     }
 
     if(isset($_POST['svuota'])){

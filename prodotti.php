@@ -4,7 +4,6 @@
         header("Location: login.php");
         exit;
     }else{
-
     }
 
     $catalogo = [
